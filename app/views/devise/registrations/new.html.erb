@@ -4,21 +4,34 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.text_field :name, autofocus: true, placeholder: "名前" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.text_field :name_kana, placeholder: "フリガナ" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :nickname, placeholder: "表示名" %>
+  </div>
+
+  <div class="field">
+    <%= f.email_field :email, autocomplete: "email", placeholder: "メール" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :phone_number, placeholder: "電話番号" %>
+  </div>
+
+  <div class="field">
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(<%= @minimum_password_length %> 文字以上)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "off", placeholder: "パスワード" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "パスワード(確認)" %>
   </div>
 
   <div class="actions">
