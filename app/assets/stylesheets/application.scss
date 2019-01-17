@@ -43,3 +43,11 @@ header .headline{
 .top-image {
   width: 100%;
 }
+
+.inline-block {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
