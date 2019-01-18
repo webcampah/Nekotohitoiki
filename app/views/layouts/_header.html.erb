@@ -2,4 +2,8 @@
 	<div class="headline">
 		<%= link_to "猫とひと息", root_path %>
 	</div>
+	<div class="float-right">
+		<p><%= link_to current_user.nickname, user_path(user.id) %></p>
+		<%= attachment_image_tag @current_user, :user_image, :fill, 40, 40, fallback: "no_image.png" %>
+	</div>
 </header>
