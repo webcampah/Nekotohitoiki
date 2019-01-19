@@ -1,9 +1,16 @@
 <header>
-	<div class="headline">
+	<h1 class="headline">
 		<%= link_to "猫とひと息", root_path %>
-	</div>
-	<div class="float-right">
-		<p><%= link_to current_user.nickname, user_path(user.id) %></p>
-		<%= attachment_image_tag @current_user, :user_image, :fill, 40, 40, fallback: "no_image.png" %>
-	</div>
+	</h1>
 </header>
+
+<nav>
+	<ul class="nav-list float-right block">
+		<li class="nav-list-item">
+			<%= link_to "新規登録", new_user_registration_path, class: "block" %>
+		</li>
+		<li class="nav-list-item">
+		    <%= link_to "ログイン", new_user_session_path, class: "block" %>
+		</li>
+	</ul>
+</nav>

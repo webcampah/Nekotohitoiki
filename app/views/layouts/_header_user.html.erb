@@ -1,0 +1,14 @@
+<header>
+	<h1 class="headline">
+		<%= link_to "猫とひと息", root_path %>
+	</h1>
+</header>
+
+<nav class="clearfix">
+	<ul class="nav-list float-right block">
+		<li class="nav-list-item">
+			<%= attachment_image_tag @current_user, :user_image, :fill, 40, 40, fallback: "no_image.png", size: "40x40" %>
+			<%= link_to current_user.nickname, user_path(current_user.id) %>
+		</li>
+	</ul>
+</nav>
