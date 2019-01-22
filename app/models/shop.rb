@@ -6,7 +6,7 @@ class Shop < ApplicationRecord
   has_many :users, through: :favorites, source: :user
   belongs_to :prefecture
 
-  validates :shop_name, presence: true, length: {maximum: 100}
+  validates :shop_name, presence: true, length: {maximum: 50}
   validates :address, presence: true, length: {maximum: 100}
   validates :shop_description, length: {maximum: 400}
 
