@@ -1,4 +1,6 @@
 class ShopsController < ApplicationController
+  require 'uri'
+
   def show
   	@shop = shop.find(params[:id])
   end
@@ -30,6 +32,11 @@ class ShopsController < ApplicationController
   	else
   		render 'edit'
   	end
+  end
+
+  def index
+    @q = Shop.ransack(params[:q])
+    @shops = @q.result(distinct: true)
   end
 
   private
