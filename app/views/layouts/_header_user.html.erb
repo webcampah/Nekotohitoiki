@@ -1,13 +1,75 @@
-<header>
-	<h1 class="headline">
-		<%= link_to "猫とひと息", root_path %>
-	</h1>
-</header>
-
-<nav class="clearfix">
-	<ul class="nav-list block">
-		<li class="nav-list-item">
-		  <%= link_to "マイページ", user_path(current_user.id) %>
-		</li>
-	</ul>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to "猫とひと息", root_path %>
+    </div>
+    <ul class="nav navbar-nav float-right">
+    	<li class="drop-down">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">北海道・東北<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                	<li><a href="#">Web Development</a></li>
+                	<li><a href="#">Web Design</a></li>
+                	<li><a href="#">Graphic Design</a></li>
+                	<li><a href="#">Branding</a></li>
+              </ul>
+        </li>
+        <li class="drop-down">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">関東<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                	<li><a href="#">Web Development</a></li>
+                	<li><a href="#">Web Design</a></li>
+                	<li><a href="#">Graphic Design</a></li>
+                	<li><a href="#">Branding</a></li>
+              </ul>
+        </li>
+        <li class="drop-down">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">中部<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                	<li><a href="#">Web Development</a></li>
+                	<li><a href="#">Web Design</a></li>
+                	<li><a href="#">Graphic Design</a></li>
+                	<li><a href="#">Branding</a></li>
+              </ul>
+        </li>
+        <li class="drop-down">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">近畿<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                	<li><a href="#">Web Development</a></li>
+                	<li><a href="#">Web Design</a></li>
+                	<li><a href="#">Graphic Design</a></li>
+                	<li><a href="#">Branding</a></li>
+              </ul>
+        </li>
+        <li class="drop-down">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">中国<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                	<li><a href="#">Web Development</a></li>
+                	<li><a href="#">Web Design</a></li>
+                	<li><a href="#">Graphic Design</a></li>
+                	<li><a href="#">Branding</a></li>
+              </ul>
+        </li>
+        <li class="drop-down">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">四国<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                	<li><a href="#">Web Development</a></li>
+                	<li><a href="#">Web Design</a></li>
+                	<li><a href="#">Graphic Design</a></li>
+                	<li><a href="#">Branding</a></li>
+              </ul>
+        </li>
+        <li class="drop-down">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">九州・沖縄<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                	<li><a href="#">Web Development</a></li>
+                	<li><a href="#">Web Design</a></li>
+                	<li><a href="#">Graphic Design</a></li>
+                	<li><a href="#">Branding</a></li>
+              </ul>
+        </li>
+        <li>
+            <%= link_to "マイページ", user_path(current_user.id) %>
+        </li>
+      </ul>
+  </div>
 </nav>

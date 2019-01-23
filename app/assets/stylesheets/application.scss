@@ -38,18 +38,6 @@ a {
   clear: both;
 }
 
-header {
-  position: relative;
-  width: 90%;
-  padding: 15px 0;
-  margin: 0 auto;
-  text-align: center;
-}
-
-header .headline{
-  font-size: 32px;
-}
-
 .flex-container {
   display: -webkit-flex;
   display: -moz-flex;
@@ -62,6 +50,10 @@ header .headline{
   float: right;
 }
 
+.float-left {
+  float: left;
+}
+
 .position-r {
   position: relative;
 }
@@ -70,14 +62,10 @@ header .headline{
   display: block;
 }
 
-.nav-list {
-  text-align: center;
-  padding: 10px 0;
-  margin: 0 auto;
+.navbar-header {
+  font-size: 32px;
 }
 
-.nav-list-item {
-  list-style: none;
-  display: inline-block;
-  margin: 0 10px;
+.container-fluid {
+  weidth: 800px;
 }
