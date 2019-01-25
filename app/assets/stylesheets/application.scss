@@ -59,10 +59,85 @@ a {
   display: block;
 }
 
-.navbar-header {
-  font-size: 32px;
+header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  background: #fff;
 }
 
-.container-fluid {
-  weidth: 800px;
+.headline {
+  font-size: 20px;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.header-logo {
+  height: 50px;
+  width: 150px;
+  line-height: 50px;
+  text-align: center;
+  float: left;
+}
+
+.header-logo img {
+  height: 80px;
+}
+
+.nav {
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav li {
+  list-style: none;
+}
+
+.nav-text {
+  display: block;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  line-height: 50px;
+  background: #a16d5d;
+  text-decoration: none;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+}
+
+.nav li a {
+  display: block;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  line-height: 50px;
+  background: #a16d5d;
+  text-decoration: none;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+}
+
+.nav li ul {
+  width: 150px;
+  display: none;
+  margin-left: -40px;
+  position: absolute;
+}
+
+.nav > li li:hover > a {/*layer-2*/
+  color: olive;
+  background: #afc6e2;
+}
+
+.nav li ul li a {
+  border-top: 1px solid #eee;
 }

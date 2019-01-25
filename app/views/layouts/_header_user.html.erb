@@ -1,75 +1,85 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <%= link_to "猫とひと息", root_path %>
-    </div>
-    <ul class="nav navbar-nav float-right">
-    	<li class="drop-down">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">北海道・東北<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                	<li><a href="#">Web Development</a></li>
-                	<li><a href="#">Web Design</a></li>
-                	<li><a href="#">Graphic Design</a></li>
-                	<li><a href="#">Branding</a></li>
-              </ul>
-        </li>
-        <li class="drop-down">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">関東<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                	<li><a href="#">Web Development</a></li>
-                	<li><a href="#">Web Design</a></li>
-                	<li><a href="#">Graphic Design</a></li>
-                	<li><a href="#">Branding</a></li>
-              </ul>
-        </li>
-        <li class="drop-down">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">中部<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                	<li><a href="#">Web Development</a></li>
-                	<li><a href="#">Web Design</a></li>
-                	<li><a href="#">Graphic Design</a></li>
-                	<li><a href="#">Branding</a></li>
-              </ul>
-        </li>
-        <li class="drop-down">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">近畿<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                	<li><a href="#">Web Development</a></li>
-                	<li><a href="#">Web Design</a></li>
-                	<li><a href="#">Graphic Design</a></li>
-                	<li><a href="#">Branding</a></li>
-              </ul>
-        </li>
-        <li class="drop-down">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">中国<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                	<li><a href="#">Web Development</a></li>
-                	<li><a href="#">Web Design</a></li>
-                	<li><a href="#">Graphic Design</a></li>
-                	<li><a href="#">Branding</a></li>
-              </ul>
-        </li>
-        <li class="drop-down">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">四国<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                	<li><a href="#">Web Development</a></li>
-                	<li><a href="#">Web Design</a></li>
-                	<li><a href="#">Graphic Design</a></li>
-                	<li><a href="#">Branding</a></li>
-              </ul>
-        </li>
-        <li class="drop-down">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">九州・沖縄<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                	<li><a href="#">Web Development</a></li>
-                	<li><a href="#">Web Design</a></li>
-                	<li><a href="#">Graphic Design</a></li>
-                	<li><a href="#">Branding</a></li>
+<header>
+    <ul class="nav">
+    	<li><%= link_to "猫とひと息", '/' %></li>
+    	<li>
+            <p class="nav-text">北海道・東北</p>
+              <ul>
+                  <li><a href="#">北海道</a></li>
+                  <li><a href="#">青森県</a></li>
+                  <li><a href="#">岩手県</a></li>
+                  <li><a href="#">宮城県</a></li>
+                  <li><a href="#">秋田県</a></li>
+                  <li><a href="#">山形県</a></li>
+                  <li><a href="#">福島県</a></li>
               </ul>
         </li>
         <li>
-            <%= link_to "マイページ", user_path(current_user.id) %>
+            <p class="nav-text">関東</p>
+              <ul>
+                  <li><a href="#">北海道</a></li>
+                  <li><a href="#">青森県</a></li>
+                  <li><a href="#">岩手県</a></li>
+                  <li><a href="#">宮城県</a></li>
+                  <li><a href="#">秋田県</a></li>
+                  <li><a href="#">山形県</a></li>
+                  <li><a href="#">福島県</a></li>
+              </ul>
         </li>
-      </ul>
-  </div>
-</nav>
+        <li>
+            <p class="nav-text">中部・近畿</p>
+              <ul>
+                  <li><a href="#">北海道</a></li>
+                  <li><a href="#">青森県</a></li>
+                  <li><a href="#">岩手県</a></li>
+                  <li><a href="#">宮城県</a></li>
+                  <li><a href="#">秋田県</a></li>
+                  <li><a href="#">山形県</a></li>
+                  <li><a href="#">福島県</a></li>
+              </ul>
+        </li>
+        <li>
+            <p class="nav-text">中国・四国</p>
+              <ul>
+                  <li><a href="#">北海道</a></li>
+                  <li><a href="#">青森県</a></li>
+                  <li><a href="#">岩手県</a></li>
+                  <li><a href="#">宮城県</a></li>
+                  <li><a href="#">秋田県</a></li>
+                  <li><a href="#">山形県</a></li>
+                  <li><a href="#">福島県</a></li>
+              </ul>
+        </li>
+        <li>
+            <p class="nav-text">九州・沖縄</p>
+              <ul>
+                  <li><a href="#">北海道</a></li>
+                  <li><a href="#">青森県</a></li>
+                  <li><a href="#">岩手県</a></li>
+                  <li><a href="#">宮城県</a></li>
+                  <li><a href="#">秋田県</a></li>
+                  <li><a href="#">山形県</a></li>
+                  <li><a href="#">福島県</a></li>
+              </ul>
+        </li>
+        <li>
+            <p class="nav-text">マイページ</p>
+            <ul>
+            	<li><%= link_to "プロフィール", user_path(current_user.id) %></li>
+            	<li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+            </ul>
+        </li>
+    </ul>
+</header>
+
+<script type='text/javascript'>
+$(function() {
+var nav = $('.nav');
+$('li', nav)
+.mouseover(function(e) {
+$('ul', this).stop().slideDown('fast');
+})
+.mouseout(function(e) {
+$('ul', this).stop().slideUp('fast');
+});
+});
+</script>
