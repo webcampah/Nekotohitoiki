@@ -1,23 +1,20 @@
-<div class="container-fluid">
+<div class="container-fluid main">
   <div class="row">
 	  <div class="col-md-6 col-md-offset-3">
       <h2>ユーザー情報</h2>
-      <table class="table">
-        <tr>
+      <div class="flex-container">
+        <div class="">
           <%= attachment_image_tag @user, :user_image, :fill, 150, 150, format: 'png', fallback: "no_image.png", size: "150x150" %>
-        </tr>
-        <tr>
-          <th>ユーザーネーム</th>
-          <th><%= @user.nickname %></th>
-        </tr>
-        <tr>
-          <th>自己紹介</th>
-          <th><%= @user.user_description %></th>
-        </tr>
-      </table>
-      <%= link_to edit_user_path(@user) do %>
-          <i class="fas fa-cog fa-2x"></i>
-        <% end %>
+        </div>
+        <div class="user-box overflow">
+          <div class="clearfix">
+            <h2 class="float-left name"><%= @user.nickname %><%= link_to edit_user_path(@user) do %>
+              <i class="fas fa-cog"></i>
+            <% end %></h2>
+          </div>
+          <p class="description"><%= @user.user_description %></p>
+        </div>
+      </div>
     </div>
 	</div>
 </div>
