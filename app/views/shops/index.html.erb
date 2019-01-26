@@ -1,0 +1,21 @@
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h2>お店一覧</h2>
+            <%= @shops.each do |shop| %>
+            <div class="flex-container">
+            	<div class="">
+            		<%= attachment_image_tag shop, :shop_image, :fill, 150, 150,  fallback: "no_image.png", size: "150x150" %>
+            	</div>
+            	<div class="user-box overflow">
+            		<div class="clearfix">
+            			<h2 class="float-left name"><%= shop.shop_name %></h2>
+            		</div>
+            		<p class="index-shop-address">所在地：<%= shop.prefecture %><%= shop.address %></p>
+            	</div>
+            </div>
+            <% end %>
+            <%= paginate @shops %>
+        </div>
+    </div>
+</div>

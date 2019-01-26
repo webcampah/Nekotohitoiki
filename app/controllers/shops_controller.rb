@@ -35,8 +35,8 @@ class ShopsController < ApplicationController
   end
 
   def index
-    @q = Shop.ransack(params[:q])
-    @shops = @q.result(distinct: true)
+    @q = Shop.search(params[:q])
+    @shops = @q.result(distinct: true).page(params[:page]).per(15)
   end
 
   private

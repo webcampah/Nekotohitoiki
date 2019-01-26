@@ -4,7 +4,7 @@
     	<li>
             <p class="nav-text">北海道・東北</p>
               <ul>
-                  <li><a href="#">北海道</a></li>
+                  <li><%= link_to '北海道', {:controller => "shops", :action => "index", :q => {:prefecture_cont => '北海道'}}%></li>
                   <li><a href="#">青森県</a></li>
                   <li><a href="#">岩手県</a></li>
                   <li><a href="#">宮城県</a></li>
