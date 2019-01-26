@@ -17,13 +17,23 @@
           <p class="description"><%= @shop.shop_description %></p>
         </div>
       </div>
-      <div>
-        <h4>コメント</h4>
-        <div id="comments_area">
-          <%= render partial: 'comments/index', locals: { comments: @comments } %>
-        </div>
+      <div class="">
+        <h3>コメント(<%= @shop.comments.count %>)</h3>
+        <% @shop.comments.each do |comment| %>
+        <% unless comment.id.nil? %>
+        <%= link_to user_path(@user) do %><%= attachment_image_tag @user, :user_image, :fill, 40, 40, fallback: "no_image.png", size: "40x40" %><%= comment.user.nickname %>
+        <% end %>
+        <p>コメント：<%= comment.content %></p>
+        <% if comment.user == current_user %>
+        <p><%= link_to '削除', shop_comments_path(comment), method: :delete %></p>
+        <% end %>
+        <% end %>
+        <% end %>
         <% if user_signed_in? %>
-        <%= render partial: 'comments/form', locals: { comment: @comment, shop: @shop } %>
+        <%= form_for [@shop, @comment] do |f| %>
+        <%= f.text_area :content %>
+        <%= f.submit "コメントする" %>
+        <% end %>
         <% end %>
       </div>
     </div>

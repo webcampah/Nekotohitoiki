@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   resources :shops do
   	post   'fav', to: 'favorites#create',  as: 'fav_create'
   	delete 'fav', to: 'favorites#destroy', as: 'fav_destroy'
-  	resources :comments
+  	resource :comments, only: [:create, :destroy]
   end
 end
