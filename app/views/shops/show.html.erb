@@ -17,6 +17,15 @@
           <p class="description"><%= @shop.shop_description %></p>
         </div>
       </div>
+      <div>
+        <h4>コメント</h4>
+        <div id="comments_area">
+          <%= render partial: 'comments/index', locals: { comments: @comments } %>
+        </div>
+        <% if user_signed_in? %>
+        <%= render partial: 'comments/form', locals: { comment: @comment, shop: @shop } %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

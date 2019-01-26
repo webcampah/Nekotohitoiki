@@ -3,6 +3,8 @@ class ShopsController < ApplicationController
 
   def show
   	@shop = Shop.find(params[:id])
+    @comment = Comment.new
+    @comments = @shop.comments
   end
 
   def new
