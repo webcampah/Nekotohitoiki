@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :users do
   	get ':id/favs', to: 'favorites#index'
   end
-  resources :places do
+  resources :shops do
   	post   'fav', to: 'favorites#create',  as: 'fav_create'
   	delete 'fav', to: 'favorites#destroy', as: 'fav_destroy'
   	resources :comments

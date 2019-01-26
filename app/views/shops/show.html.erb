@@ -1,0 +1,22 @@
+<div class="container-fluid main">
+  <div class="row">
+	  <div class="col-md-6 col-md-offset-3">
+      <h2>お店情報</h2>
+      <div class="flex-container">
+        <div class="">
+          <%= attachment_image_tag @shop, :shop_image, :fill, 200, 200,  fallback: "no_image.png", size: "200x200" %>
+        </div>
+        <div class="user-box overflow">
+          <div class="clearfix">
+            <h2 class="float-left name"><%= @shop.shop_name %><%= link_to edit_shop_path(@shop) do %>
+              <i class="fas fa-cog"></i>
+            <% end %></h2>
+          </div>
+          <p>所在地：<%= @shop.prefecture %><%= @shop.address %></p>
+          <p>URL：<%= text_url_to_link(h(@shop.shop_url)).html_safe %></p>
+          <p class="description"><%= @shop.shop_description %></p>
+        </div>
+      </div>
+    </div>
+	</div>
+</div>

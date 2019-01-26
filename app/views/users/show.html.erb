@@ -4,7 +4,7 @@
       <h2>ユーザー情報</h2>
       <div class="flex-container">
         <div class="">
-          <%= attachment_image_tag @user, :user_image, :fill, 150, 150, format: 'png', fallback: "no_image.png", size: "150x150" %>
+          <%= attachment_image_tag @user, :user_image, :fill, 150, 150, fallback: "no_image.png", size: "150x150" %>
         </div>
         <div class="user-box overflow">
           <div class="clearfix">

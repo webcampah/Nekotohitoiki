@@ -62,9 +62,10 @@
               </ul>
         </li>
         <li>
-            <p class="nav-text">マイページ</p>
+            <p class="nav-text"><%= current_user.nickname %></p>
             <ul>
             	<li><%= link_to "プロフィール", user_path(current_user.id) %></li>
+              <li><%= link_to "お店投稿", new_shop_path %></li>
             	<li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
             </ul>
         </li>

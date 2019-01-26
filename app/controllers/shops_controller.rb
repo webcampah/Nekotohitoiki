@@ -2,33 +2,33 @@ class ShopsController < ApplicationController
   require 'uri'
 
   def show
-  	@shop = shop.find(params[:id])
+  	@shop = Shop.find(params[:id])
   end
 
   def new
-  	@shop = shop.new
+  	@shop = Shop.new
   end
 
   def create
-  	@shop = shop.new(shop_params)
+  	@shop = Shop.new(shop_params)
   	if @shop.save
   		flash[:success] = '新規投稿が成功しました'
-  		redirect_to shop_path
+  		redirect_to shop_path(@shop.id)
   	else
   		render 'new'
   	end
   end
 
   def edit
-  	@shop = shop.find(params[:id])
+  	@shop = Shop.find(params[:id])
   end
 
   def update
-  	@shop = shop.find(params[:id])
+  	@shop = Shop.find(params[:id])
   	@shop.update(shop_params)
   	if @shop.save
   		flash[:success] = "編集しました"
-  		redirect_to shop_path
+  		redirect_to shop_path(@shop)
   	else
   		render 'edit'
   	end
@@ -42,5 +42,6 @@ class ShopsController < ApplicationController
   private
 
   def shop_params
-  	params.require(:shop).permit(:shop_name, :shop_description, :shop_image, :prefecture, :address)
+  	params.require(:shop).permit(:shop_name, :shop_description, :shop_image, :prefecture, :address, :shop_url)
+  end
 end
