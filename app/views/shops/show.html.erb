@@ -1,7 +1,7 @@
 <div class="container-fluid main">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <h2>お店情報</h2>
+      <h2 class="h2">お店情報</h2>
       <div class="flex-container">
         <div class="">
           <%= attachment_image_tag @shop, :shop_image, :fill, 200, 200,  fallback: "no_image.png", size: "200x200" %>
@@ -24,9 +24,6 @@
         <%= link_to user_path(@user) do %><%= attachment_image_tag @user, :user_image, :fill, 40, 40, fallback: "no_image.png", size: "40x40" %><%= comment.user.nickname %>
         <% end %>
         <p>コメント：<%= comment.content %></p>
-        <% if comment.user == current_user %>
-        <p><%= link_to '削除', shop_comments_path(comment), method: :delete %></p>
-        <% end %>
         <% end %>
         <% end %>
         <% if user_signed_in? %>

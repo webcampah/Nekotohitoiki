@@ -7,13 +7,6 @@ class CommentsController < ApplicationController
     redirect_to shop_path(shop)
   end
 
-  def destroy
-    shop = Shop.find(params[:shop_id])
-  	comment = shop.comments.find(params[:id])
-    comment.destroy
-  	redirect_to shop_path(shop)
-  end
-
   private
 
   def comment_params

@@ -1,10 +1,8 @@
 class ShopsController < ApplicationController
-  require 'uri'
-
   def show
   	@shop = Shop.find(params[:id])
     @comment = Comment.new
-    @user = User.find(params[:id])
+    @user = User.find_by(params[:id])
   end
 
   def new
@@ -37,8 +35,7 @@ class ShopsController < ApplicationController
   end
 
   def index
-    @q = Shop.search(params[:q])
-    @shops = @q.result(distinct: true).page(params[:page]).per(15)
+    @shops = Shop.where(["prefecture LIKE ?", "%#{params[:prefecture]}%"]).page(params[:page]).per(20)
   end
 
   private

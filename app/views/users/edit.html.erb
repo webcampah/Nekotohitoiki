@@ -1,11 +1,11 @@
 <div class="container-fluid main">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <h2>ユーザー情報編集</h2>
+            <h2 class="h2">ユーザー情報編集</h2>
             <%= form_for(@user) do |f| %>
             <%= render 'layouts/error_messages', instance: @user %>
             <div class="flex-container">
-                <div class="block">
+                <div class="block mt-10">
                     <%= attachment_image_tag @user, :user_image, :fill, 150, 150, fallback: "no_image.png", size: "150x150" %>
                     <%= f.attachment_field :user_image %>
                 </div>
