@@ -2,6 +2,7 @@ class ShopsController < ApplicationController
   def show
   	@shop = Shop.find(params[:id])
     @comment = Comment.new
+    @comments = Comment.order(created_at: :desc).page(params[:page]).per(15)
     @user = User.find_by(params[:id])
   end
 
