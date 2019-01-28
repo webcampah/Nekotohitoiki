@@ -12,6 +12,6 @@ class User < ApplicationRecord
   has_many :shops, through: :favorites, source: :shop
 
   validates :name, presence: true, length: {in: 2..20}
-  validates :email, presence: :true, uniqueness: true, format: {with: VALID_EMAIL_REGEX}, length: {maximum: 50}
+  validates :email, presence: true, uniqueness: true, format: {with: VALID_EMAIL_REGEX}, length: {maximum: 50}
   validates :nickname, presence: true, length: {in: 2..20}
 end

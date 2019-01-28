@@ -1,9 +1,9 @@
-<% if instance.errors.any? %>
-  <div id="error_explanation">
+<% if model.errors.any? %>
+  <div id="error_content">
     <ul>
-    <% instance.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
+      <% model.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
     </ul>
   </div>
 <% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_26_050809) do
+ActiveRecord::Schema.define(version: 2019_01_28_051333) do
 
   create_table "comments", force: :cascade do |t|
     t.text "content"
@@ -27,12 +27,6 @@ ActiveRecord::Schema.define(version: 2019_01_26_050809) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "prefectures", force: :cascade do |t|
-    t.string "prefecture_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "shops", force: :cascade do |t|
     t.text "shop_name"
     t.text "shop_image_id"
@@ -40,10 +34,8 @@ ActiveRecord::Schema.define(version: 2019_01_26_050809) do
     t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "prefecture_id"
     t.string "prefecture"
     t.text "shop_url"
-    t.index ["prefecture_id"], name: "index_shops_on_prefecture_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -58,7 +50,6 @@ ActiveRecord::Schema.define(version: 2019_01_26_050809) do
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
     t.string "name"
-    t.string "name_kana"
     t.string "nickname"
     t.text "user_image_id"
     t.text "user_description"

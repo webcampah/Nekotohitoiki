@@ -3,7 +3,6 @@ class ShopsController < ApplicationController
   	@shop = Shop.find(params[:id])
     @comment = Comment.new
     @comments = Comment.order(created_at: :desc).page(params[:page]).per(15)
-    @user = User.find_by(params[:id])
   end
 
   def new
@@ -13,7 +12,7 @@ class ShopsController < ApplicationController
   def create
   	@shop = Shop.new(shop_params)
   	if @shop.save
-  		flash[:success] = '新規投稿が成功しました'
+  		flash[:success] = "新規投稿が成功しました"
   		redirect_to shop_path(@shop.id)
   	else
   		render 'new'

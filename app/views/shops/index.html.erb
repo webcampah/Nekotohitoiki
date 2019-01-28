@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <h2 class="h2">お店一覧</h2>
-            <%= @shops.each do |shop| %>
+            <% @shops.each do |shop| %>
             <div class="flex-container box1">
             	<div class="">
             		<%= attachment_image_tag shop, :shop_image, :fill, 150, 150,  fallback: "no_image.png", size: "150x150" %>
