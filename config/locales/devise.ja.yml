@@ -74,3 +74,4 @@ ja:
         password_confirmation: 'パスワード確認'
         email: 'メールアドレス'
         nickname: '表示名'
+        phone_number: '電話番号'
