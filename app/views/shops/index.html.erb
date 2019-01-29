@@ -1,7 +1,7 @@
 <div class="container-fluid main">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <h2 class="h2"><%= "#{params[:prefecture]}" %>のお店一覧</h2>
+            <h2 class="h2"><%= @shop.prefecture %>のお店一覧</h2>
             <% @shops.each do |shop| %>
             <div class="flex-container box1">
             	<div class="">

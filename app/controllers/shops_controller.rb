@@ -3,6 +3,7 @@ class ShopsController < ApplicationController
   	@shop = Shop.find(params[:id])
     @comment = Comment.new
     @comments = Comment.order(created_at: :desc).page(params[:page]).per(15)
+    @favorites = Favorite.where(shop_id: params[:id])
   end
 
   def new
@@ -36,6 +37,7 @@ class ShopsController < ApplicationController
 
   def index
     @shops = Shop.where(["prefecture LIKE ?", "%#{params[:prefecture]}%"]).page(params[:page]).per(20)
+    @shop = Shop.find_by(params[:id])
   end
 
   private

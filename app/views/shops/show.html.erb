@@ -11,7 +11,10 @@
             <h2 class="float-left name"><%= @shop.shop_name %><%= link_to edit_shop_path(@shop) do %>
               <i class="fas fa-cog"></i>
               <% end %></h2>
-            </div>
+              <div id="favorite-btn-<%= @shop.id %>" class="float-right">
+                <%= render partial: 'favorites/favorite_form', locals: { shop: @shop} %>
+              </div>
+          </div>
             <p>所在地：<%= @shop.prefecture %><%= @shop.address %></p>
             <p>URL：<%= text_url_to_link(h(@shop.shop_url)).html_safe %></p>
             <p class="description"><%= @shop.shop_description %></p>

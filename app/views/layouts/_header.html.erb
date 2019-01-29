@@ -4,13 +4,13 @@
       <li>
             <p class="nav-text">北海道・東北</p>
               <ul>
-                  <li><%= link_to '北海道', {:controller => "shops", :action => "index", :prefecture => '北海道'} %></li>
-                  <li><%= link_to '青森県', {:controller => "shops", :action => "index", :prefecture => '青森県'} %></li>
-                  <li><%= link_to '岩手県', {:controller => "shops", :action => "index", :prefecture => '岩手県'} %></li>
-                  <li><%= link_to '宮城県', {:controller => "shops", :action => "index", :prefecture => '宮城県'} %></li>
-                  <li><%= link_to '秋田県', {:controller => "shops", :action => "index", :prefecture => '秋田県'} %></li>
-                  <li><%= link_to '山形県', {:controller => "shops", :action => "index", :prefecture => '山形県'} %></li>
-                  <li><%= link_to '福島県', {:controller => "shops", :action => "index", :prefecture => '福島県'} %></li>
+                  <li><%= link_to '北海道', shops_path, {:prefecture => '北海道'} %></li>
+                  <li><%= link_to '青森県', shops_path, {:prefecture => '青森県'} %></li>
+                  <li><%= link_to '岩手県', shops_path, {:prefecture => '岩手県'} %></li>
+                  <li><%= link_to '宮城県', shops_path, {:prefecture => '宮城県'} %></li>
+                  <li><%= link_to '秋田県', shops_path, {:prefecture => '秋田県'} %></li>
+                  <li><%= link_to '山形県', shops_path, {:prefecture => '山形県'} %></li>
+                  <li><%= link_to '福島県', shops_path, {:prefecture => '福島県'} %></li>
               </ul>
         </li>
         <li>

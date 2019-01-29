@@ -44,7 +44,6 @@ footer {
   height: 50px;
   text-align: center;
   line-height: 50px;
-  position: absolute;
   bottom: 0;
 }
 
@@ -223,4 +222,19 @@ label {
 .button:hover {
   color: #8b5e52;
   background: #ffffff;
+}
+
+.fav-input-clear {
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.fav-input-clear:hover {
+  color: #ffd700;
+  opacity: .8;
+}
+
+.yellow {
+  color: #ffd700;
 }

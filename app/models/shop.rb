@@ -9,7 +9,7 @@ class Shop < ApplicationRecord
   validates :address, presence: true, length: {maximum: 100}
   validates :shop_description, length: {maximum: 400}
 
-  def fav_user(user_id)
-  	Favorite.find_by(user_id: user_id)
+  def favorite?(shop, user)
+    shop.favorites.find_by(user_id: user.id)
   end
 end

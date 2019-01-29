@@ -12,4 +12,8 @@ module ApplicationHelper
 
     return text
 end
+
+    def fav_counter(favorites)
+  	  favorites.count
+    end
 end

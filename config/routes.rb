@@ -3,11 +3,10 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'tops#top'
   resources :users do
-  	get ':id/favs', to: 'favorites#index'
+  	get 'favs', to: 'favorites#index'
   end
   resources :shops do
-  	post   'fav', to: 'favorites#create',  as: 'fav_create'
-  	delete 'fav', to: 'favorites#destroy', as: 'fav_destroy'
+  	resource :favorites, only: [:create, :destroy]
   	resource :comments, only: [:create, :destroy]
   end
 end
