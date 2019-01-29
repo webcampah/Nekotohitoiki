@@ -3,7 +3,6 @@ class ShopsController < ApplicationController
   	@shop = Shop.find(params[:id])
     @comment = Comment.new
     @comments = Comment.order(created_at: :desc).page(params[:page]).per(15)
-    @favorites = Favorite.where(shop_id: params[:id])
   end
 
   def new

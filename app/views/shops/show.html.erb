@@ -11,7 +11,7 @@
             <h2 class="float-left name"><%= @shop.shop_name %><%= link_to edit_shop_path(@shop) do %>
               <i class="fas fa-cog"></i>
               <% end %></h2>
-              <div id="favorite-btn-<%= @shop.id %>" class="float-right">
+              <div id="favorite-btn-<%= @shop.id %>" class="float-right mt-10">
                 <%= render partial: 'favorites/favorite_form', locals: { shop: @shop} %>
               </div>
           </div>
