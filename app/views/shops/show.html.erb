@@ -22,9 +22,9 @@
         </div>
         <div class="com-top-border"></div>
         <div class="">
-          <h3>コメント(<%= @comments.count %>)</h3>
+          <h3>コメント(<%= @shop.comments.count %>)</h3>
           <div class="scroll-box inline-block">
-            <% @comments.each do |comment| %>
+            <% @shop.comments.each do |comment| %>
             <% unless comment.id.nil? %>
             <p class="comment-seperator"></p>
             <div class="comment-box">
