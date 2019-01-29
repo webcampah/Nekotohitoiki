@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   end
   resources :shops do
   	resource :favorites, only: [:create, :destroy]
-  	resource :comments, only: [:create, :destroy]
+  	resource :comments, only: [:create]
   end
 end
