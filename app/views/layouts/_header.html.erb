@@ -4,13 +4,13 @@
       <li>
             <p class="nav-text">北海道・東北</p>
               <ul>
-                  <li><%= link_to '北海道', shops_path, {:prefecture => '北海道'} %></li>
-                  <li><%= link_to '青森県', shops_path, {:prefecture => '青森県'} %></li>
-                  <li><%= link_to '岩手県', shops_path, {:prefecture => '岩手県'} %></li>
-                  <li><%= link_to '宮城県', shops_path, {:prefecture => '宮城県'} %></li>
-                  <li><%= link_to '秋田県', shops_path, {:prefecture => '秋田県'} %></li>
-                  <li><%= link_to '山形県', shops_path, {:prefecture => '山形県'} %></li>
-                  <li><%= link_to '福島県', shops_path, {:prefecture => '福島県'} %></li>
+                  <li><%= link_to '北海道', shops_path(prefecture: '北海道') %></li>
+                  <li><%= link_to '青森県', shops_path(prefecture: '青森県') %></li>
+                  <li><%= link_to '岩手県', shops_path(prefecture: '岩手県') %></li>
+                  <li><%= link_to '宮城県', shops_path(prefecture: '宮城県') %></li>
+                  <li><%= link_to '秋田県', shops_path(prefecture: '秋田県') %></li>
+                  <li><%= link_to '山形県', shops_path(prefecture: '山形県') %></li>
+                  <li><%= link_to '福島県', shops_path(prefecture: '福島県') %></li>
               </ul>
         </li>
         <li>
@@ -61,16 +61,6 @@
                   <li><a href="#">福島県</a></li>
               </ul>
         </li>
-<!--         <li>
-            <p class="nav-text">カテゴリー</p>
-              <ul>
-                  <li><a href="#">喫茶店・カフェ</a></li>
-                  <li><a href="#">古民家系</a></li>
-                  <li><a href="#">旅館・宿・ホテル</a></li>
-                  <li><a href="#">お寺・神社</a></li>
-                  <li><a href="#">その他</a></li>
-              </ul>
-        </li> -->
         <li><%= link_to "新規登録", new_user_registration_path %></li>
         <li><%= link_to "ログイン", new_user_session_path %></li>
     </ul>

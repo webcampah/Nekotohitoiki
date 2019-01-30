@@ -36,7 +36,6 @@ class ShopsController < ApplicationController
 
   def index
     @shops = Shop.where(["prefecture LIKE ?", "%#{params[:prefecture]}%"]).page(params[:page]).per(20)
-    @shop = Shop.find_by(params[:id])
   end
 
   private
