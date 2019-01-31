@@ -1,5 +1,80 @@
 <header>
-	<div class="headline">
-		<%= link_to "猫とひと息", root_path %>
-	</div>
+    <ul class="nav">
+      <li><%= link_to "猫とひと息", '/' %></li>
+      <li>
+            <p class="nav-text">北海道・東北</p>
+              <ul>
+                  <li><%= link_to '北海道', shops_path(prefecture: '北海道') %></li>
+                  <li><%= link_to '青森県', shops_path(prefecture: '青森県') %></li>
+                  <li><%= link_to '岩手県', shops_path(prefecture: '岩手県') %></li>
+                  <li><%= link_to '宮城県', shops_path(prefecture: '宮城県') %></li>
+                  <li><%= link_to '秋田県', shops_path(prefecture: '秋田県') %></li>
+                  <li><%= link_to '山形県', shops_path(prefecture: '山形県') %></li>
+                  <li><%= link_to '福島県', shops_path(prefecture: '福島県') %></li>
+              </ul>
+        </li>
+        <li>
+            <p class="nav-text">関東</p>
+              <ul>
+                  <li><a href="#">北海道</a></li>
+                  <li><a href="#">青森県</a></li>
+                  <li><a href="#">岩手県</a></li>
+                  <li><a href="#">宮城県</a></li>
+                  <li><a href="#">秋田県</a></li>
+                  <li><a href="#">山形県</a></li>
+                  <li><a href="#">福島県</a></li>
+              </ul>
+        </li>
+        <li>
+            <p class="nav-text">中部・近畿</p>
+              <ul>
+                  <li><a href="#">北海道</a></li>
+                  <li><a href="#">青森県</a></li>
+                  <li><a href="#">岩手県</a></li>
+                  <li><a href="#">宮城県</a></li>
+                  <li><a href="#">秋田県</a></li>
+                  <li><a href="#">山形県</a></li>
+                  <li><a href="#">福島県</a></li>
+              </ul>
+        </li>
+        <li>
+            <p class="nav-text">中国・四国</p>
+              <ul>
+                  <li><a href="#">北海道</a></li>
+                  <li><a href="#">青森県</a></li>
+                  <li><a href="#">岩手県</a></li>
+                  <li><a href="#">宮城県</a></li>
+                  <li><a href="#">秋田県</a></li>
+                  <li><a href="#">山形県</a></li>
+                  <li><a href="#">福島県</a></li>
+              </ul>
+        </li>
+        <li>
+            <p class="nav-text">九州・沖縄</p>
+              <ul>
+                  <li><a href="#">北海道</a></li>
+                  <li><a href="#">青森県</a></li>
+                  <li><a href="#">岩手県</a></li>
+                  <li><a href="#">宮城県</a></li>
+                  <li><a href="#">秋田県</a></li>
+                  <li><a href="#">山形県</a></li>
+                  <li><a href="#">福島県</a></li>
+              </ul>
+        </li>
+        <li><%= link_to "新規登録", new_user_registration_path %></li>
+        <li><%= link_to "ログイン", new_user_session_path %></li>
+    </ul>
 </header>
+
+<script type='text/javascript'>
+$(function() {
+var nav = $('.nav');
+$('li', nav)
+.mouseover(function(e) {
+$('ul', this).stop().slideDown('fast');
+})
+.mouseout(function(e) {
+$('ul', this).stop().slideUp('fast');
+});
+});
+</script>

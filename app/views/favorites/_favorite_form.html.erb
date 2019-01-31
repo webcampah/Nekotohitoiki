@@ -1,0 +1,15 @@
+<% if user_signed_in? %>
+    <% if shop.favorite?(shop, current_user) %>
+        <%= button_to shop_favorites_path(shop_id: shop), method: :delete, remote: true, class: "fas fa-star fav-input-clear yellow" do %>
+          <%= shop.favorites_count %>
+        <% end %>
+    <% else %>
+        <%= button_to shop_favorites_path(shop_id: shop), remote: true, class: "far fa-star fav-input-clear" do %>
+          <%= shop.favorites_count %>
+        <% end %>
+    <% end %>
+<% else %>
+    <div class="fas fa-star yellow fav-input-clear">
+    	<%= shop.favorites_count %>
+    </div>
+<% end %>

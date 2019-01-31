@@ -1,0 +1,36 @@
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h2 class="h2"><%= "#{params[:prefecture]}" %>のお店一覧</h2>
+            <% @shops.each do |shop| %>
+            <div class="flex-container box1">
+            	<div class="">
+            		<%= attachment_image_tag shop, :shop_image, :fill, 150, 150,  fallback: "no_image.png", size: "150x150" %>
+            	</div>
+            	<div class="user-box overflow">
+            		<div class="clearfix">
+            			<h2 class="float-left name"><%= link_to shop.shop_name, shop_path(shop) %></h2>
+            		</div>
+            		<p class="index-shop-address">所在地：<%= shop.prefecture %><%= shop.address %></p>
+                    <h3 class="index-com">コメント(<%= shop.comments.count %>)</h3>
+            	</div>
+                <div class="flex-container mt-10">
+                    <% if user_signed_in? %>
+                        <% if shop.favorite?(shop, current_user) %>
+                          <i class="fas fa-star fav-input-clear yellow"></i>
+                          <h3><%= shop.favorites_count %></h3>
+                        <% else %>
+                            <i class="far fa-star fav-input-clear yellow"></i>
+                            <h3><%= shop.favorites_count %></h3>
+                        <% end %>
+                    <% else %>
+                        <i class="far fa-star yellow fav-input-clear"></i>
+                        <h3><%= shop.favorites_count %></h3>
+                    <% end %>
+                </div>
+            </div>
+            <% end %>
+            <%= paginate @shops %>
+        </div>
+    </div>
+</div>
