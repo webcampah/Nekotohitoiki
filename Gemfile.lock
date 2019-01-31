@@ -303,6 +303,7 @@ DEPENDENCIES
   rails (~> 5.2.2)
   rails-i18n
   ransack
+
   refile!
   refile-mini_magick
   rspec-rails
