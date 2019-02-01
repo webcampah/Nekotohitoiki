@@ -75,3 +75,7 @@ ja:
         email: 'メールアドレス'
         nickname: '表示名'
         phone_number: '電話番号'
+      shop:
+        shop_name: '店名'
+        prefecture: '都道府県'
+        address: '住所'

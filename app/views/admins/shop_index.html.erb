@@ -1,0 +1,26 @@
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h1>ショップ一覧</h1>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>画像</th>
+                    <th>店名</th>
+                    <th>記事作成日</th>
+                    <th>記事削除</th>
+                </tr>
+                <% @shops.each do |shop| %>
+                <tr>
+                    <td><%= shop.id %></td>
+                    <td><%= attachment_image_tag shop, :shop_image, :fill, 80, 80, fallback: "no_image.png", size: "80x80" %></td>
+                    <td><%= link_to shop.shop_name, shop_path(shop) %></td>
+                    <td><%= shop.created_at.strftime("%Y-%m-%d %H:%M") %></td>
+                    <td><%= link_to "削除", shop, method: :delete, data: { confirm: "削除しますか？" } %></td>
+                </tr>
+                <% end %>
+            </table>
+            <%= paginate @shops %>
+        </div>
+    </div>
+</div>

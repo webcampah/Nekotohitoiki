@@ -1,7 +1,7 @@
 <header>
     <ul class="nav">
-    	<li><%= link_to "猫とひと息", '/' %></li>
-    	<li>
+      <li><%= link_to "猫とひと息", '/' %></li>
+      <li>
             <p class="nav-text">北海道・東北</p>
               <ul>
                   <li><%= link_to '北海道', shops_path(prefecture: '北海道') %></li>
@@ -62,11 +62,11 @@
               </ul>
         </li>
         <li>
-            <p class="nav-text"><%= current_user.nickname %></p>
+          <p class="nav-text">admin</p>
             <ul>
-            	<li><%= link_to "プロフィール", user_path(current_user.id) %></li>
-              <li><%= link_to "お店投稿", new_shop_path %></li>
-            	<li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+              <li><%= link_to "ユーザー一覧", admins_user_index_path %></li>
+              <li><%= link_to "お店一覧", admins_shop_index_path %></li>
+              <li><%= link_to "ログアウト", destroy_admin_session_path, method: :delete %></li>
             </ul>
         </li>
     </ul>

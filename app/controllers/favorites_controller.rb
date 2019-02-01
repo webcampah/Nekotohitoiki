@@ -1,5 +1,6 @@
 class FavoritesController < ApplicationController
 	before_action :set_shop, except: :index
+  before_action :authenticate_user!, only: [:create, :destroy]
 
   def create
   	@favorite = Favorite.create(user_id: current_user.id, shop_id: params[:shop_id])

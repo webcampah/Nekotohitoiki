@@ -1,0 +1,26 @@
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h1>ユーザー一覧</h1>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>画像</th>
+                    <th>氏名</th>
+                    <th>アカウント作成日</th>
+                    <th>アカウント削除</th>
+                </tr>
+                <% @users.each do |user| %>
+                <tr>
+                    <td><%= user.id %></td>
+                    <td><%= attachment_image_tag user, :user_image, :fill, 80, 80, fallback: "no_image.png", size: "80x80" %></td>
+                    <td><%= link_to user.name, user_path(user) %></td>
+                    <td><%= user.created_at.strftime("%Y-%m-%d %H:%M") %></td>
+                    <td><%= link_to "削除", user, method: :delete, data: { confirm: "削除しますか？" } %></td>
+                </tr>
+                <% end %>
+            </table>
+            <%= paginate @users %>
+        </div>
+    </div>
+</div>
