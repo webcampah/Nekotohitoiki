@@ -16,6 +16,8 @@
     <div id="wrapper">
     <% if user_signed_in? %>
       <%= render 'layouts/header_user' %>
+    <% elsif admin_signed_in? %>
+      <%= render 'layouts/header_admin' %>
     <% else %>
       <%= render 'layouts/header' %>
     <% end %>

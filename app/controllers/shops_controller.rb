@@ -1,8 +1,11 @@
 class ShopsController < ApplicationController
+  before_action :authenticate_user!,  only: [:create, :edit, :update]
+  before_action :authenticate_admin!, only: [:destroy]
+
   def show
   	@shop = Shop.find(params[:id])
     @comment = Comment.new
-    @comments = Comment.order(created_at: :desc).page(params[:page]).per(15)
+    @comments = Comment.where(shop_id: params[:id]).page(params[:page]).per(10).order(created_at: 'desc')
   end
 
   def new
@@ -15,6 +18,7 @@ class ShopsController < ApplicationController
   		flash[:success] = "新規投稿が成功しました"
   		redirect_to shop_path(@shop.id)
   	else
+      flash[:danger] = "入力内容の確認をお願いします"
   		render 'new'
   	end
   end
@@ -30,12 +34,24 @@ class ShopsController < ApplicationController
   		flash[:success] = "編集しました"
   		redirect_to shop_path(@shop)
   	else
+      flash[:danger] = "編集内容の確認をお願いします"
   		render 'edit'
   	end
   end
 
   def index
     @shops = Shop.where(["prefecture LIKE ?", "%#{params[:prefecture]}%"]).page(params[:page]).per(20)
+  end
+
+  def destroy
+    @shop = Shop.find(params[:id])
+    if @shop.destroy
+      flash[:success] = "削除しました"
+      redirect_to admins_shop_index_path
+    else
+      flash[:danger] = "削除失敗しました"
+      redirect_to admins_shop_index_path
+    end
   end
 
   private

@@ -9,7 +9,7 @@
         <div class="user-box overflow">
           <div class="clearfix">
             <h2 class="float-left name"><%= @user.nickname %>
-              <% if @user == current_user %>
+              <% if current_user or current_admin %>
                 <%= link_to edit_user_path(@user) do %>
                 <i class="fas fa-cog"></i>
               <% end %>
