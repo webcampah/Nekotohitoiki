@@ -16,7 +16,8 @@ class FavoritesController < ApplicationController
   end
 
   def index
-  	@favorites = Favorite.where(user_id: current_user.id).order("created_at desc")
+    @user = current_user
+  	@favorites = Favorite.where(user_id: @user.id).all
   end
 
   private

@@ -16,49 +16,66 @@
         <li>
             <p class="nav-text">関東</p>
               <ul>
-                  <li><a href="#">北海道</a></li>
-                  <li><a href="#">青森県</a></li>
-                  <li><a href="#">岩手県</a></li>
-                  <li><a href="#">宮城県</a></li>
-                  <li><a href="#">秋田県</a></li>
-                  <li><a href="#">山形県</a></li>
-                  <li><a href="#">福島県</a></li>
+                  <li><%= link_to '茨城県', shops_path(prefecture: '茨城県') %></li>
+                  <li><%= link_to '栃木県', shops_path(prefecture: '栃木県') %></li>
+                  <li><%= link_to '群馬県', shops_path(prefecture: '群馬県') %></li>
+                  <li><%= link_to '埼玉県', shops_path(prefecture: '埼玉県') %></li>
+                  <li><%= link_to '千葉県', shops_path(prefecture: '千葉県') %></li>
+                  <li><%= link_to '東京都', shops_path(prefecture: '東京都') %></li>
+                  <li><%= link_to '神奈川県', shops_path(prefecture: '神奈川県') %></li>
               </ul>
         </li>
         <li>
-            <p class="nav-text">中部・近畿</p>
+            <p class="nav-text">中部</p>
               <ul>
-                  <li><a href="#">北海道</a></li>
-                  <li><a href="#">青森県</a></li>
-                  <li><a href="#">岩手県</a></li>
-                  <li><a href="#">宮城県</a></li>
-                  <li><a href="#">秋田県</a></li>
-                  <li><a href="#">山形県</a></li>
-                  <li><a href="#">福島県</a></li>
+                  <li><%= link_to '新潟県', shops_path(prefecture: '新潟県') %></li>
+                  <li><%= link_to '富山県', shops_path(prefecture: '富山県') %></li>
+                  <li><%= link_to '石川県', shops_path(prefecture: '石川県') %></li>
+                  <li><%= link_to '福井県', shops_path(prefecture: '福井県') %></li>
+                  <li><%= link_to '山梨県', shops_path(prefecture: '山梨県') %></li>
+                  <li><%= link_to '長野県', shops_path(prefecture: '長野県') %></li>
+                  <li><%= link_to '岐阜県', shops_path(prefecture: '岐阜県') %></li>
+                  <li><%= link_to '静岡県', shops_path(prefecture: '静岡県') %></li>
+                  <li><%= link_to '愛知県', shops_path(prefecture: '岐阜県') %></li>
+              </ul>
+        </li>
+        <li>
+            <p class="nav-text">近畿</p>
+              <ul>
+                  <li><%= link_to '三重県', shops_path(prefecture: '三重県') %></li>
+                  <li><%= link_to '滋賀県', shops_path(prefecture: '滋賀県') %></li>
+                  <li><%= link_to '奈良県', shops_path(prefecture: '奈良県') %></li>
+                  <li><%= link_to '和歌山県', shops_path(prefecture: '和歌山県') %></li>
+                  <li><%= link_to '京都府', shops_path(prefecture: '京都府') %></li>
+                  <li><%= link_to '大阪府', shops_path(prefecture: '大阪府') %></li>
+                  <li><%= link_to '兵庫県', shops_path(prefecture: '兵庫県') %></li>
               </ul>
         </li>
         <li>
             <p class="nav-text">中国・四国</p>
               <ul>
-                  <li><a href="#">北海道</a></li>
-                  <li><a href="#">青森県</a></li>
-                  <li><a href="#">岩手県</a></li>
-                  <li><a href="#">宮城県</a></li>
-                  <li><a href="#">秋田県</a></li>
-                  <li><a href="#">山形県</a></li>
-                  <li><a href="#">福島県</a></li>
+                  <li><%= link_to '岡山県', shops_path(prefecture: '岡山県') %></li>
+                  <li><%= link_to '広島県', shops_path(prefecture: '広島県') %></li>
+                  <li><%= link_to '鳥取県', shops_path(prefecture: '鳥取県') %></li>
+                  <li><%= link_to '島根県', shops_path(prefecture: '島根県') %></li>
+                  <li><%= link_to '山口県', shops_path(prefecture: '山口県') %></li>
+                  <li><%= link_to '香川県', shops_path(prefecture: '香川県') %></li>
+                  <li><%= link_to '徳島県', shops_path(prefecture: '徳島県') %></li>
+                  <li><%= link_to '愛媛県', shops_path(prefecture: '愛媛県') %></li>
+                  <li><%= link_to '高知県', shops_path(prefecture: '高知県') %></li>
               </ul>
         </li>
         <li>
             <p class="nav-text">九州・沖縄</p>
               <ul>
-                  <li><a href="#">北海道</a></li>
-                  <li><a href="#">青森県</a></li>
-                  <li><a href="#">岩手県</a></li>
-                  <li><a href="#">宮城県</a></li>
-                  <li><a href="#">秋田県</a></li>
-                  <li><a href="#">山形県</a></li>
-                  <li><a href="#">福島県</a></li>
+                  <li><%= link_to '福岡県', shops_path(prefecture: '福岡県') %></li>
+                  <li><%= link_to '佐賀県', shops_path(prefecture: '佐賀県') %></li>
+                  <li><%= link_to '長崎県', shops_path(prefecture: '長崎県') %></li>
+                  <li><%= link_to '大分県', shops_path(prefecture: '大分県') %></li>
+                  <li><%= link_to '熊本県', shops_path(prefecture: '熊本県') %></li>
+                  <li><%= link_to '宮崎県', shops_path(prefecture: '宮崎県') %></li>
+                  <li><%= link_to '鹿児島県', shops_path(prefecture: '鹿児島県') %></li>
+                  <li><%= link_to '沖縄県', shops_path(prefecture: '沖縄県') %></li>
               </ul>
         </li>
         <li><%= link_to "新規登録", new_user_registration_path %></li>
