@@ -18,7 +18,9 @@
           <p class="description"><%= @user.user_description %></p>
         </div>
       </div>
-      <p><%= link_to "お気に入り", user_favs_path(@user) %></p>
+      <p class="index-shop-address">◯<%= link_to "お気に入り", user_favs_path(@user) %></p>
+      <p class="index-shop-address">◯<%= link_to "退会", @user, method: :delete, data: { confirm: "退会しますか？" } %></p>
+
     </div>
 	</div>
 </div>
