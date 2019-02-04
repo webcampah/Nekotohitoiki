@@ -18,6 +18,7 @@
                 <%= render partial: 'favorites/favorite_form', locals: { shop: @shop} %>
               </div>
           </div>
+          <p>カテゴリ：<%= @shop.category %></p>
             <p>所在地：<%= @shop.prefecture %><%= @shop.address %></p>
             <p>URL：<%= text_url_to_link(h(@shop.shop_url)).html_safe %></p>
             <p class="description"><%= @shop.shop_description %></p>

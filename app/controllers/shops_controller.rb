@@ -40,11 +40,15 @@ class ShopsController < ApplicationController
   end
 
   def index
-    @shops = Shop.where(["prefecture LIKE ?", "%#{params[:prefecture]}%"]).page(params[:page]).per(20)
+    if params[:category] && params[:prefecture]
+      @shops = Shop.where(prefecture: (params[:prefecture])).where(category: (params[:category])).page(params[:page]).per(20)
+    else
+      @shops = Shop.where(prefecture: (params[:prefecture])).page(params[:page]).per(20)
+    end
   end
 
   def destroy
-    @shop = Shop.find(params[:id])
+    @shop =  Shop.find(params[:id])
     if @shop.destroy
       flash[:success] = "削除しました"
       redirect_to admins_shop_index_path
@@ -57,6 +61,6 @@ class ShopsController < ApplicationController
   private
 
   def shop_params
-  	params.require(:shop).permit(:shop_name, :shop_description, :shop_image, :prefecture, :address, :shop_url)
+  	params.require(:shop).permit(:shop_name, :shop_description, :shop_image, :prefecture, :address, :shop_url, :category)
   end
 end
